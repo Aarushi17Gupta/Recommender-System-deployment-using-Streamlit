@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 
 
 
-@st.cache(max_entries=10, ttl=3600)
+@st.cache(ttl=24*3600)
 def load_data(data):
     df=pd.read_csv(data)
     return df
