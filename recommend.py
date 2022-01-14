@@ -13,7 +13,7 @@ import gc
 
 
 gc.enable()
-#@st.cache(ttl=24*3600)
+@st.cache
 def load_data(data):
     df=pd.read_csv(data)
     return df
