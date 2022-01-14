@@ -9,10 +9,11 @@ import re
 pd.set_option('display.max_columns',None)
 import warnings
 warnings.filterwarnings('ignore')
+import gc
 
 
-
-@st.cache(ttl=24*3600)
+gc.enable()
+#@st.cache(ttl=24*3600)
 def load_data(data):
     df=pd.read_csv(data)
     return df
@@ -161,4 +162,6 @@ def main():
         
 if __name__ == "__main__":
     main()
+  
+gc.collect()
 
