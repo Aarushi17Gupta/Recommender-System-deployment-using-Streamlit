@@ -9,11 +9,10 @@ import re
 pd.set_option('display.max_columns',None)
 import warnings
 warnings.filterwarnings('ignore')
-import gc
 
-gc.enable()
-gc.collect()
 
+
+@st.cache(suppress_st_warning=True) 
 def load_data(data):
     df=pd.read_csv(data)
     return df
