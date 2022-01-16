@@ -130,7 +130,7 @@ def main():
         image = Image.open('r1.png')
         st.image(image, width=700)
         st.subheader("About")
-        st.text("Built with streamlit and Pandas")
+        st.text("This is a ML based general recommender system built with Pandas and Streamlit.\n It can recommend you Books, Movies and Receipes.\n By:- Aarushi Gupta")
         
 if __name__ == "__main__":
     main()
